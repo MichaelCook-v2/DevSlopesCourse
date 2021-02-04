@@ -50,11 +50,29 @@ html, body {
 }
 
 
-ul.topnav .nav-link {
-    text-decoration: none;
-padding-left: 20px;
+ul.topnav li.dropdownLink{   display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+ul.topnav.responsive li li.dropdownLink {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+ul.topnav.responsive {
+    flex-direction: column;
+    text-align: right;
+}
+
+ul.topnav.responsive li {
+    position: relative;
+    top: 30px;
 }
 
 ul.topnav.responsive li a.nav-link {
     display: block;
 }
+

@@ -1,23 +1,125 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
- 
 body {
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #F5F3F4;
 }
- 
-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.navbar {
+    background-color: #d3d3d3;
+    padding: 10px;
+    text-align: right;
+    box-shadow: 0px -2px 7px #4c4342;
+    margin-bottom: 15px;
+}
+
+.navbar > a {
+    color: #232A2F;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+section {
+    padding: 10px;
+    max-width:900px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    color: #4c4342;
+
+}
+
+hr {
+    margin-bottom: 25px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
+    color:#232A2F;
+    gap: 10px;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.portfolio-item {
+    height: 150px;
+    width: 175px;
+    background-color: #232a2f;
+    padding: 10px;
     border-radius: 5px;
+
 }
-.your-grid-container-class {
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
+
+.portfolio-item:nth-child(even) {
+    background-color: transparent;
+    border: 2px solid #d3d3d3;
+    color:#4c4342
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas:
+    "form form . fb twitter"
+    "form form . youtube ig";
+    gap: 20px;
+}
+
+.fb ,.twitter, .youtube, .ig {
+    width: 175px;
+    height: 175px;
+    color:#232a2f
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 7px #4c4342;
+    background-color: #d3d3d3
+}
+
+.fb > span,
+.twitter > span,
+.youtube > span,
+.ig > span, {
+    text-align: center;
+    position: relative;
+    top:40%;
+}
+
+.form { grid-area: form;}
+.fb { grid-area: fb;}
+.twitter { grid-area: twitter;}
+.ig { grid-area: ig;}
+.youtube{ grid-area: youtube;}
+
+label {
+    display: block;
+    color:#232A2F;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 10px;    
+    border: 1px solid  #4c4342;
+    padding: 15px 8px;
+    border-radius: 5px;
+    background-color: rgba(197,198,199, 0.1);
+    width: 75%;
+}
+
+footer {
+    text-align: center;
+    box-shadow: 0px 2px 7px #4c4342;
+    background-color: #d3d3d3;
+    padding: 10px;
+    margin-top: 200px;
+}
+
+address {
+    text-align: center;
+    margin-top: 10px;
 }

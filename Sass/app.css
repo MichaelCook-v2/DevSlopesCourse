@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#header {
+  text-align: center;
+  display: block;
+  width: 100%;
+  background-color: #008975;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+}

@@ -1,0 +1,69 @@
+//Variables
+$brand-main:         #adb5bd
+$brand-sub:          #9d0208
+$brand-dark:         #6A040F
+$brand-light:        #e9272e
+$brand-white:        #ffff
+$brand-light-gray:   #c2c2c2
+
+
+
+
+//Mixins
+=shaping($height, $width, $rad, $bg, $color)
+    height:                 $height
+    width:                  $width
+    -webkit-border-radius:  $rad
+    -moz-border-radius:     $rad
+    border-radius:          $rad
+    background-color:       $bg
+    color:                  $color
+
+=btn-main($padding, $rad, $bg,$color)
+    padding:            $padding
+    boder-radius:       $rad
+    background-color:   $bg
+    color:              $color
+    border-width: 0
+    border-style: none
+    cursor: pointer
+    display: block
+    margin: auto
+    &:hover
+        background-color: lighten($brand-sub, 15%)
+
+//Styles
+body
+    background-color: $brand-main
+
+h1
+    text-align: center
+    padding-top: 20px
+
+section
+        background-color: $brand-sub
+        color: $brand-light-gray
+        width: 780px
+        margin: auto
+        padding: 20px
+        border-radius: 10px
+        position: relative
+        z-index:-2
+
+.thumb1
+    +shaping(120px, 120px, 5%, $brand-light, $brand-main)
+    margin: 0 435px -90px
+
+.thumb2
+    +shaping(100px, 100px, 50%, $brand-light, $brand-dark)
+    margin: 55px 900px
+
+.btn-1
+    +btn-main(15px 20px,7px, $brand-sub, $brand-white)
+
+.btn-2
+    +btn-main(20px, 40px, $brand-white, $brand-light-gray)
+    font-size: 3rem
+    &:hover
+    color: darken($brand-dark, 40%)
+
